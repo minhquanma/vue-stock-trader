@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-4 card-container">
+    <div class="col-md-4 my-container">
         <div class="card">
             <div class="card-header">
                 <h4>
@@ -56,7 +56,5 @@
     }
 </script>
 <style>
-    .card-container {
-        padding: 15px 0;
-    }
+
 </style>

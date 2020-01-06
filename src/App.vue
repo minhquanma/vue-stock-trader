@@ -24,4 +24,8 @@ export default {
 body {
   padding: 30px;
 }
+
+.my-container {
+  padding: 15px 0;
+}
 </style>

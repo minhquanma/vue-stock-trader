@@ -1,6 +1,6 @@
 <template>
-    <div class="col-md-4 card-container">
-        <div class="card">
+    <div class="col-md-4 my-container">
+        <div class="card border-success">
             <div class="card-header">
                 <h4>
                     {{ stock.name }}
@@ -41,22 +41,21 @@
             }
         },
         methods: {
-            ...mapActions([
-                'sellStock'
-            ]),
+            ...mapActions({
+                placeSellOrder: 'sellStock'
+            }),
             sellStock() {
                 const order = {
                     stockId: this.stock.id,
                     stockPrice: this.stock.price,
                     quantity: this.quantity
                 };
-                this.sellStock();
+                this.placeSellOrder(order);
+                this.quantity = 0;
             }
         }
     }
 </script>
 <style>
-    .card-container {
-        padding: 15px 0;
-    }
+
 </style>
